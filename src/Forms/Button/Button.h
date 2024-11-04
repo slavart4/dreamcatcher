@@ -8,22 +8,28 @@
 
 class Button {
 public:
-    explicit Button(uint8_t toScene, uint8_t picture, const std::string& text, bool chosen) :
-    m_toScene(toScene), m_picture(picture), m_text(text), m_chosen(chosen) {};
+    explicit Button(uint8_t toSceneIndex, uint8_t textIndex, uint8_t pictureIndex, std::string  text, bool chosen) :
+            m_toSceneIndex(toSceneIndex),
+            m_textIndex(textIndex),
+            m_pictureIndex(pictureIndex),
+            m_text(std::move(text)),
+            m_chosen(chosen) {};
 
-    std::string text()  { return m_text; }
-    bool chosen() const { return m_chosen; }
-    uint8_t toScene()   { return m_toScene; }
-    uint8_t length()    { return m_length; }
-    uint8_t width()     { return m_width; }
-    uint8_t picture()   { return m_picture; }
+    std::string text()       { return m_text; }
+    bool chosen() const      { return m_chosen; }
+    uint8_t length()         { return m_length; }
+    uint8_t width()          { return m_width; }
+    uint8_t pictureIndex()   { return m_pictureIndex; }
+    uint8_t toSceneIndex()   { return m_toSceneIndex; }
+    uint8_t textIndex()      { return m_textIndex; }
 
     void setChosen(bool chosen) { m_chosen = chosen; }
-    uint8_t action() { return m_toScene; }
+    uint8_t action() { return m_toSceneIndex; }
 private:
     std::string m_text;
-    uint8_t m_picture = 0;
-    uint8_t m_toScene = 0;
+    uint8_t m_pictureIndex = 0;
+    uint8_t m_textIndex = 0;
+    uint8_t m_toSceneIndex = 0;
     bool m_chosen = false;
 
     uint8_t m_length;

@@ -1,0 +1,10 @@
+#ifndef DREAMCATCHER_STORYSTATE_H
+#define DREAMCATCHER_STORYSTATE_H
+
+
+class StoryState {
+
+};
+
+
+#endif //DREAMCATCHER_STORYSTATE_H

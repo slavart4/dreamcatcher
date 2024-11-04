@@ -8,12 +8,12 @@
 class Picture {
 public:
     Picture(const std::string& path);
-    uint8_t high() const { return m_high; }
+    size_t high() const { return m_high; }
     std::string& pictureText() { return m_picture; }
 private:
     std::string m_path;
     std::string m_picture;
-    uint8_t m_high = 0;
+    size_t m_high = 0;
 };
 
 

@@ -37,8 +37,8 @@ add_executable(dreamcatcher ${SOURCES}
         src/Forms/Options/Options.cpp
         src/Forms/Options/Options.h
         src/States/State.h
-        src/States/GameState.cpp
-        src/States/GameState.h
+        src/States/StoryState.cpp
+        src/States/StoryState.h
         src/States/SettingsState.cpp
         src/States/SettingsState.h
         src/States/StateContext.h
@@ -57,6 +57,10 @@ add_executable(dreamcatcher ${SOURCES}
         src/Scenes/ScenesManager.h
         src/Scenes/Builders/StoryBuilder.cpp
         src/Scenes/Builders/StoryBuilder.h
+        src/Scenes/Scenes/MenuScene.cpp
+        src/Scenes/Scenes/MenuScene.h
+        src/Scenes/Scenes/StoryScene.cpp
+        src/Scenes/Scenes/StoryScene.h
 )
 
 file(GLOB TESTS ${PROJECT_SOURCE_DIR}/tests/*.cpp)
