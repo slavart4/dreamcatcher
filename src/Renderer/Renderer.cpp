@@ -14,6 +14,7 @@ void Renderer::draw(Scene &scene) {
     drawSeparateLine();
     drawTitle(scene);
     drawText(scene);
+    drawSeparateLine();
     drawOptions(scene);
 }
 
@@ -22,15 +23,15 @@ void Renderer::clear() {
 }
 
 void Renderer::drawPicture(Scene &scene) {
-    size_t space = (m_pictureSlot - scene.picture()->high()) / 2;
+    size_t diff = m_pictureSlot - scene.picture()->high();
+    size_t space = (diff > 2) ? (diff / 2) : 0;
 
     fillEmpty(space);
     std::cout << scene.picture()->pictureText() << std::endl;
-    fillEmpty(space);
 }
 
 void Renderer::drawTitle(Scene &scene) {
-    std::cout << CYAN << scene.title() << RESET << "\n"<< std::endl;
+    std::cout << scene.title() << "\n\n";
 }
 
 void Renderer::drawText(Scene &scene) {
@@ -38,7 +39,7 @@ void Renderer::drawText(Scene &scene) {
 }
 
 void Renderer::drawOptions(Scene &scene) {
-    std::cout << scene.options()->buttonsText() << std::endl;
+    std::cout << scene.options()->buttonsText();
 }
 
 void Renderer::drawSeparateLine() {

@@ -4,6 +4,22 @@
       "id": 0,
       "type": "menu",
       "title": "Welcome to the game!",
+      "texts": ["Billy is an ordinary schoolboy. With one exception. He constantly has bad dreams. In a desperate attempt to get rid of them, he buys a dreamcatcher at an Indian market with his last pocket money. He likes the animal figures hanging on it. A bear, a cat and a dog. Will they help get rid of the nightmares?"],
+      "picturePaths": ["../assets/pictures/welcome.txt"],
+      "options": [
+        {
+          "name": "Press any key to continue",
+          "pictureIndex": 0,
+          "textIndex": 0,
+          "toScene": 1,
+          "chosen": true
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "menu",
+      "title": "Welcome to the game!",
       "texts": ["Your goal is to defeat all nightmares and help Billy fall asleep."],
       "picturePaths": ["../assets/pictures/mainmenu.txt"],
       "options": [
@@ -11,20 +27,20 @@
           "name": "Start game",
           "pictureIndex": 0,
           "textIndex": 0,
-          "toScene": 1,
+          "toScene": 2,
           "chosen": true
         },
         {
           "name": "Settings",
           "pictureIndex": 0,
           "textIndex": 0,
-          "toScene": 0,
+          "toScene": 1,
           "chosen": false
         }
       ]
     },
     {
-      "id": 1,
+      "id": 2,
       "type": "menu",
       "title": "Choose your character!",
       "texts": [
@@ -38,30 +54,46 @@
           "name": "Bear",
           "pictureIndex": 0,
           "textIndex": 0,
-          "toScene": 2,
+          "toScene": 3,
           "chosen": true
         },
         {
           "name": "Cat",
           "pictureIndex": 1,
           "textIndex": 1,
-          "toScene": 2,
+          "toScene": 3,
           "chosen": false
         },
         {
           "name": "Dog",
           "pictureIndex": 2,
           "textIndex": 2,
-          "toScene": 2,
+          "toScene": 3,
           "chosen": false
         }
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "type": "story",
-      "title": "Billie in the bus",
-      "texts": ["Billie have a dream where he rides in the bus to the school."],
+      "title": "Billy sleeps and dreams",
+      "texts": ["After a hard day at school, Billy slept like a log."],
+      "picturePaths": ["../assets/pictures/sleep.txt"],
+      "options": [
+        {
+          "name": "Press any key to continue",
+          "pictureIndex": 0,
+          "textIndex": 0,
+          "toScene": 4,
+          "chosen": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "story",
+      "title": "Billy sleeps and dreams",
+      "texts": ["Billie have a dream where he rides in the school bus."],
       "picturePaths": ["../assets/pictures/bus.txt"],
       "options": [
         {
