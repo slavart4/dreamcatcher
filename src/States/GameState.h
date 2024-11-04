@@ -1,0 +1,10 @@
+#ifndef DREAMCATCHER_GAMESTATE_H
+#define DREAMCATCHER_GAMESTATE_H
+
+
+class GameState {
+
+};
+
+
+#endif //DREAMCATCHER_GAMESTATE_H

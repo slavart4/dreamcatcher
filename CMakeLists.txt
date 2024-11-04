@@ -26,7 +26,37 @@ add_test(NAME tests COMMAND tests)
 
 
 file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
-add_executable(dreamcatcher ${SOURCES} src/Game.cpp
+add_executable(dreamcatcher ${SOURCES}
+        src/Game.cpp
+        src/Console/Console.cpp
+        src/Forms/Button/Button.cpp
+        src/Forms/Button/Button.h
+        src/Scenes/Scene.h
+        src/Forms/Picture/Picture.cpp
+        src/Forms/Picture/Picture.h
+        src/Forms/Options/Options.cpp
+        src/Forms/Options/Options.h
+        src/States/State.h
+        src/States/GameState.cpp
+        src/States/GameState.h
+        src/States/SettingsState.cpp
+        src/States/SettingsState.h
+        src/States/StateContext.h
+        src/States/MenuState.cpp
+        src/States/MenuState.h
+        src/Renderer/Renderer.cpp
+        src/Renderer/Renderer.h
+        src/Scenes/Builders/Builder.h
+        src/Scenes/Builders/MenuBuilder.cpp
+        src/Scenes/Builders/MenuBuilder.h
+        src/Scenes/Director/Director.cpp
+        src/Scenes/Director/Director.h
+        src/DataIO/DataIO.cpp
+        src/DataIO/DataIO.h
+        src/Scenes/ScenesManager.cpp
+        src/Scenes/ScenesManager.h
+        src/Scenes/Builders/StoryBuilder.cpp
+        src/Scenes/Builders/StoryBuilder.h
 )
 
 file(GLOB TESTS ${PROJECT_SOURCE_DIR}/tests/*.cpp)
@@ -36,3 +66,4 @@ target_link_libraries(tests gtest gtest_main)
 target_link_libraries(dreamcatcher nlohmann_json::nlohmann_json)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_EXE_LINKER_FLAGS "-static")

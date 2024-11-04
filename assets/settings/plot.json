@@ -1,0 +1,64 @@
+{
+  "scenes": [
+    {
+      "id": 0,
+      "type": "menu",
+      "text": "Welcome to the game!",
+      "picturePaths": ["../assets/pictures/mainmenu.txt"],
+      "options": [
+        {
+          "name": "Start game",
+          "pictureIndex": 0,
+          "toScene": 1,
+          "chosen": true
+        },
+        {
+          "name": "Settings",
+          "pictureIndex": 0,
+          "toScene": 0,
+          "chosen": false
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "type": "menu",
+      "text": "Choose your character!",
+      "picturePaths": ["../assets/pictures/bear.txt", "../assets/pictures/cat.txt", "../assets/pictures/dog.txt"],
+      "options": [
+        {
+          "name": "Bear",
+          "pictureIndex": 0,
+          "toScene": 2,
+          "chosen": true
+        },
+        {
+          "name": "Cat",
+          "pictureIndex": 1,
+          "toScene": 2,
+          "chosen": false
+        },
+        {
+          "name": "Dog",
+          "pictureIndex": 2,
+          "toScene": 2,
+          "chosen": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "story",
+      "text": "Billie is riding int he bus",
+      "picturePaths": ["../assets/pictures/bus.txt"],
+      "options": [
+        {
+          "name": "Press any key to continue",
+          "pictureIndex": 0,
+          "toScene": 3,
+          "chosen": true
+        }
+      ]
+    }
+  ]
+}

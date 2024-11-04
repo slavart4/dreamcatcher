@@ -11,9 +11,9 @@ Game *Game::GetInstance()
 }
 
 void Game::run() {
-    std::cout << "Enter your name\n";
-    std::string name;
-    std::getline( std::cin, name );
+    ScenesManager manager;
+    StateContext context(std::make_unique<MenuState>(manager, 0));
 
-    std::cout << "Hello " + name << std::endl;
+    Console console(context);
+    console.handleInput();
 }
