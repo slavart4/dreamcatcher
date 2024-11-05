@@ -14,7 +14,9 @@ void StoryBuilder::setOptions(nlohmann::json& scene) {
 
 void StoryBuilder::setOptionsButtons(nlohmann::json& scene) {
     actionParams params;
-    params.toScene = scene["options"][0]["toScene"];
+    if(scene["options"][0]["command"]["name"] == "toScene") {
+        params.toScene = scene["options"][0]["command"]["value"];
+    }
 
     m_options->addButton(
             Button(

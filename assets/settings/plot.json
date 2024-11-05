@@ -12,7 +12,6 @@
           "pictureIndex": 0,
           "textIndex": 0,
           "command": { "name": "toScene", "value": 1 },
-          "toScene": 1,
           "chosen": true
         }
       ]
@@ -29,7 +28,6 @@
           "pictureIndex": 0,
           "textIndex": 0,
           "command": { "name": "toScene", "value": 2 },
-          "toScene": 2,
           "chosen": true
         },
         {
@@ -37,7 +35,6 @@
           "pictureIndex": 0,
           "textIndex": 0,
           "command": { "name": "toScene", "value": 1 },
-          "toScene": 1,
           "chosen": false
         }
       ]
@@ -58,7 +55,6 @@
           "pictureIndex": 0,
           "textIndex": 0,
           "command": { "name": "toScene", "value": 3 },
-          "toScene": 3,
           "chosen": true
         },
         {
@@ -66,7 +62,6 @@
           "pictureIndex": 1,
           "textIndex": 1,
           "command": { "name": "toScene", "value": 3 },
-          "toScene": 3,
           "chosen": false
         },
         {
@@ -74,7 +69,6 @@
           "pictureIndex": 2,
           "textIndex": 2,
           "command": { "name": "toScene", "value": 3 },
-          "toScene": 3,
           "chosen": false
         }
       ]
@@ -91,7 +85,6 @@
           "pictureIndex": 0,
           "textIndex": 0,
           "command": { "name": "toScene", "value": 4 },
-          "toScene": 4,
           "chosen": true
         }
       ]
@@ -107,8 +100,23 @@
           "name": "Press enter to continue",
           "pictureIndex": 0,
           "textIndex": 0,
-          "command": { "name": "toScene", "value": 4 },
-          "toScene": 3,
+          "command": { "name": "toScene", "value": 5 },
+          "chosen": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "story",
+      "title": "Billy sleeps and dreams",
+      "texts": ["Billie have a dream where he rides in the school bus."],
+      "picturePaths": ["../assets/pictures/bus.txt"],
+      "options": [
+        {
+          "name": "Press enter to continue",
+          "pictureIndex": 0,
+          "textIndex": 0,
+          "command": { "name": "toScene", "value": 5 },
           "chosen": true
         }
       ]
