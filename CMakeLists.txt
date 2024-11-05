@@ -39,8 +39,8 @@ add_executable(dreamcatcher ${SOURCES}
         src/States/State.h
         src/States/StoryState.cpp
         src/States/StoryState.h
-        src/States/SettingsState.cpp
-        src/States/SettingsState.h
+        src/States/FightState.cpp
+        src/States/FightState.h
         src/States/StateContext.h
         src/States/MenuState.cpp
         src/States/MenuState.h
@@ -62,12 +62,17 @@ add_executable(dreamcatcher ${SOURCES}
         src/Scenes/Scenes/StoryScene.cpp
         src/Scenes/Scenes/StoryScene.h
         src/Command/Command.h
+        src/Characters/Character.h
+        src/Characters/MainCharacter.cpp
+        src/Characters/MainCharacter.h
+        src/Characters/EnemyCharacter.cpp
+        src/Characters/EnemyCharacter.h
         src/Command/Commands/UpKeyCommand.cpp
         src/Command/Commands/UpKeyCommand.h
         src/Command/Commands/DownKeyCommand.cpp
         src/Command/Commands/DownKeyCommand.h
-        src/Command/Commands/EnterCommand.cpp
-        src/Command/Commands/EnterCommand.h
+        src/Command/Commands/EnterKeyCommand.cpp
+        src/Command/Commands/EnterKeyCommand.h
 )
 
 file(GLOB TESTS ${PROJECT_SOURCE_DIR}/tests/*.cpp)

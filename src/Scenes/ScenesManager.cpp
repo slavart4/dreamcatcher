@@ -1,4 +1,5 @@
 #include "ScenesManager.h"
+#include "../Renderer/Renderer.h"
 
 ScenesManager::ScenesManager() {
     DataIO dataIo("../assets/settings/plot.json");
@@ -19,6 +20,7 @@ ScenesManager::ScenesManager() {
             m_scenes[menuBuilder.getResult()->id()] = menuBuilder.getResult();
         }
     }
+    Renderer::GetInstance()->draw(*m_scenes.at(0));
 }
 
 std::shared_ptr<Scene> ScenesManager::scene(uint8_t id) {

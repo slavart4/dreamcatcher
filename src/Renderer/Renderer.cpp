@@ -1,5 +1,13 @@
 #include "Renderer.h"
 
+Renderer* Renderer::renderer_singleton_= nullptr;
+Renderer* Renderer::GetInstance()
+{
+    if(renderer_singleton_==nullptr){
+        renderer_singleton_ = new Renderer();
+    }
+    return renderer_singleton_;
+}
 
 Renderer::Renderer() {
     for(int i = 0; i < m_windowWidth; i++) {

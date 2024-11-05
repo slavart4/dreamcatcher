@@ -8,9 +8,10 @@
       "picturePaths": ["../assets/pictures/welcome.txt"],
       "options": [
         {
-          "name": "Press any key to continue",
+          "name": "Press enter to continue",
           "pictureIndex": 0,
           "textIndex": 0,
+          "command": { "name": "toScene", "value": 1 },
           "toScene": 1,
           "chosen": true
         }
@@ -27,6 +28,7 @@
           "name": "Start game",
           "pictureIndex": 0,
           "textIndex": 0,
+          "command": { "name": "toScene", "value": 2 },
           "toScene": 2,
           "chosen": true
         },
@@ -34,6 +36,7 @@
           "name": "Settings",
           "pictureIndex": 0,
           "textIndex": 0,
+          "command": { "name": "toScene", "value": 1 },
           "toScene": 1,
           "chosen": false
         }
@@ -54,6 +57,7 @@
           "name": "Bear",
           "pictureIndex": 0,
           "textIndex": 0,
+          "command": { "name": "toScene", "value": 3 },
           "toScene": 3,
           "chosen": true
         },
@@ -61,6 +65,7 @@
           "name": "Cat",
           "pictureIndex": 1,
           "textIndex": 1,
+          "command": { "name": "toScene", "value": 3 },
           "toScene": 3,
           "chosen": false
         },
@@ -68,6 +73,7 @@
           "name": "Dog",
           "pictureIndex": 2,
           "textIndex": 2,
+          "command": { "name": "toScene", "value": 3 },
           "toScene": 3,
           "chosen": false
         }
@@ -81,9 +87,10 @@
       "picturePaths": ["../assets/pictures/sleep.txt"],
       "options": [
         {
-          "name": "Press any key to continue",
+          "name": "Press enter to continue",
           "pictureIndex": 0,
           "textIndex": 0,
+          "command": { "name": "toScene", "value": 4 },
           "toScene": 4,
           "chosen": true
         }
@@ -97,9 +104,10 @@
       "picturePaths": ["../assets/pictures/bus.txt"],
       "options": [
         {
-          "name": "Press any key to continue",
+          "name": "Press enter to continue",
           "pictureIndex": 0,
           "textIndex": 0,
+          "command": { "name": "toScene", "value": 4 },
           "toScene": 3,
           "chosen": true
         }

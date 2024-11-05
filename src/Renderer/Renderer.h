@@ -13,8 +13,14 @@
 
 class Renderer {
 public:
-    Renderer();
     void draw(Scene& scene);
+    static Renderer* GetInstance();
+public:
+    Renderer(Renderer &other) = delete;
+    void operator=(const Renderer&) = delete;
+private:
+    Renderer();
+    static Renderer* renderer_singleton_;
 private:
     void clear();
     void drawPicture(Scene& scene);
