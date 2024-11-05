@@ -13,7 +13,7 @@ public:
     void increaseChosen();
     void decreaseChosen();
 
-    uint8_t action();
+    actionParams& action();
     std::string buttonsText();
     uint8_t size();
     uint8_t chosen();

@@ -12,7 +12,8 @@ Game *Game::GetInstance()
 
 void Game::run() {
     ScenesManager manager;
-    StateContext context(std::make_unique<MenuState>(manager, 0));
+    StateContext context;
+    context.setState(std::make_unique<StoryState>(context, manager, 0));
 
     Console console(context);
     console.handleInput();

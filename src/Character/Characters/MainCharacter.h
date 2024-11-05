@@ -1,7 +1,7 @@
 #ifndef DREAMCATCHER_MAINCHARACTER_H
 #define DREAMCATCHER_MAINCHARACTER_H
 
-#include "Character.h"
+#include "../Character.h"
 
 #include <utility>
 

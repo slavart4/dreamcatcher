@@ -14,9 +14,12 @@ void MenuBuilder::setOptions(nlohmann::json& scene) {
 
 void MenuBuilder::setOptionsButtons(nlohmann::json& scene) {
     for(const auto& btnInfo : scene["options"]) {
+        actionParams params;
+        params.toScene = btnInfo["toScene"];
+
         m_options->addButton(
         Button(
-                btnInfo["toScene"],
+                params,
                 btnInfo["textIndex"],
                 btnInfo["pictureIndex"],
                 btnInfo["name"],

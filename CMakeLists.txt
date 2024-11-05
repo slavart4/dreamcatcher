@@ -62,11 +62,11 @@ add_executable(dreamcatcher ${SOURCES}
         src/Scenes/Scenes/StoryScene.cpp
         src/Scenes/Scenes/StoryScene.h
         src/Command/Command.h
-        src/Characters/Character.h
-        src/Characters/MainCharacter.cpp
-        src/Characters/MainCharacter.h
-        src/Characters/EnemyCharacter.cpp
-        src/Characters/EnemyCharacter.h
+        src/Character/Character.h
+        src/Character/Characters/MainCharacter.cpp
+        src/Character/Characters/MainCharacter.h
+        src/Character/Characters/EnemyCharacter.cpp
+        src/Character/Characters/EnemyCharacter.h
         src/Command/Commands/UpKeyCommand.cpp
         src/Command/Commands/UpKeyCommand.h
         src/Command/Commands/DownKeyCommand.cpp

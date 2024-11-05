@@ -38,7 +38,7 @@ std::string Options::buttonsText() {
     return result;
 }
 
-uint8_t Options::action() {
+actionParams& Options::action() {
     return m_buttons[m_chosenButton].action();
 }
 

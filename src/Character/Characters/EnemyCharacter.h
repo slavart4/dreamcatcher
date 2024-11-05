@@ -1,7 +1,7 @@
 #ifndef DREAMCATCHER_ENEMYCHARACTER_H
 #define DREAMCATCHER_ENEMYCHARACTER_H
 
-#include "Character.h"
+#include "../Character.h"
 
 class EnemyCharacter : public Character {
 public:

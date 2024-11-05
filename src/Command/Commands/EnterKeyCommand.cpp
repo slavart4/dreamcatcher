@@ -2,6 +2,9 @@
 #include "../../States/StateContext.h"
 
 void EnterKeyCommand::execute(StateContext &stateContext) {
-    stateContext.state()->enterKeyAction();
-    Renderer::GetInstance()->draw(stateContext.state()->scene());
+    actionParams params = stateContext.state()->enterKeyAction();
+    if(params.toScene > 0) {
+        stateContext.state()->setScene(params.toScene);
+        Renderer::GetInstance()->draw(stateContext.state()->scene());
+    }
 }

@@ -4,9 +4,9 @@
 #include <thread>
 #include <memory>
 #include "Console/Console.h"
-#include "States/StateContext.h"
-#include "States/MenuState.h"
 #include "Scenes/ScenesManager.h"
+#include "States/StateContext.h"
+#include "States/StoryState.h"
 
 class Game {
 public:
