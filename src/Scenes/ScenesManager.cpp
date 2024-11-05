@@ -8,16 +8,20 @@ ScenesManager::ScenesManager() {
     for(auto& sceneJson : data) {
         std::string sceneType = sceneJson["type"];
         if(sceneType == "story") {
-            director.constructScene(storyBuilder, sceneJson);
-            m_scenes[storyBuilder.getResult()->id()] = storyBuilder.getResult();
+            m_director.constructScene(m_storyBuilder, sceneJson);
+            m_scenes[m_storyBuilder.getResult()->id()] = m_storyBuilder.getResult();
         }
         else if (sceneType == "menu") {
-            director.constructScene(menuBuilder, sceneJson);
-            m_scenes[menuBuilder.getResult()->id()] = menuBuilder.getResult();
+            m_director.constructScene(m_menuBuilder, sceneJson);
+            m_scenes[m_menuBuilder.getResult()->id()] = m_menuBuilder.getResult();
+        }
+        else if (sceneType == "fight") {
+            m_director.constructScene(m_fightBuiler, sceneJson);
+            m_scenes[m_fightBuiler.getResult()->id()] = m_fightBuiler.getResult();
         }
         else {
-            director.constructScene(menuBuilder, sceneJson);
-            m_scenes[menuBuilder.getResult()->id()] = menuBuilder.getResult();
+            m_director.constructScene(m_menuBuilder, sceneJson);
+            m_scenes[m_menuBuilder.getResult()->id()] = m_menuBuilder.getResult();
         }
     }
     Renderer::GetInstance()->draw(*m_scenes.at(0));

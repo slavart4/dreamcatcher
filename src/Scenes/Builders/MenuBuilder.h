@@ -11,6 +11,7 @@ public:
     void setOptionsButtons(nlohmann::json& scene) override;
     void setTitle(nlohmann::json& scene) override;
     void setTexts(nlohmann::json& scene) override;
+    void setCharacters(nlohmann::json& data) override {};
     void createScene() override;
     void setPictures(nlohmann::json& scene) override;
 

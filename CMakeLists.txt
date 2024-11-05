@@ -73,6 +73,17 @@ add_executable(dreamcatcher ${SOURCES}
         src/Command/Commands/DownKeyCommand.h
         src/Command/Commands/EnterKeyCommand.cpp
         src/Command/Commands/EnterKeyCommand.h
+        src/Scenes/Scenes/FightScene.cpp
+        src/Scenes/Scenes/FightScene.h
+        src/Scenes/Builders/FightBuiler.cpp
+        src/Scenes/Builders/FightBuiler.h
+        src/Character/CharactersManager.h
+        src/Character/CharactersManager.cpp
+        src/Character/Factory/Creator.h
+        src/Character/Factory/EnemyCreator.cpp
+        src/Character/Factory/EnemyCreator.h
+        src/Character/Factory/CharacterCreator.cpp
+        src/Character/Factory/CharacterCreator.h
 )
 
 file(GLOB TESTS ${PROJECT_SOURCE_DIR}/tests/*.cpp)
