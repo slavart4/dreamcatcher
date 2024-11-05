@@ -8,6 +8,7 @@
 
 #include "Scene.h"
 #include "Builders/MenuBuilder.h"
+#include "Builders/StoryBuilder.h"
 #include "Director/Director.h"
 
 class ScenesManager {
@@ -17,7 +18,8 @@ public:
 private:
     std::unordered_map<uint8_t, std::shared_ptr<Scene>> m_scenes;
     Director director;
-    MenuBuilder builder;
+    MenuBuilder menuBuilder;
+    StoryBuilder storyBuilder;
 };
 
 

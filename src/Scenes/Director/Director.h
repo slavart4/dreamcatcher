@@ -6,7 +6,7 @@
 
 class Director {
 public:
-    void constructMenuScene(Builder& builder, nlohmann::json& data);
+    void constructScene(Builder& builder, nlohmann::json& data);
 };
 
 

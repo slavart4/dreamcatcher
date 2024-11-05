@@ -5,6 +5,8 @@
 #include <cstdint>
 #include <utility>
 #include <vector>
+#include <memory>
+//#include "../../Command/Command.h"
 
 class Button {
 public:
@@ -25,6 +27,9 @@ public:
 
     void setChosen(bool chosen) { m_chosen = chosen; }
     uint8_t action() { return m_toSceneIndex; }
+
+//    void setCommand(std::unique_ptr<Command>&& command);
+//    void executeCommand();
 private:
     std::string m_text;
     uint8_t m_pictureIndex = 0;
@@ -32,8 +37,8 @@ private:
     uint8_t m_toSceneIndex = 0;
     bool m_chosen = false;
 
-    uint8_t m_length;
-    uint8_t m_width;
+    uint8_t m_length{};
+    uint8_t m_width{};
 };
 
 

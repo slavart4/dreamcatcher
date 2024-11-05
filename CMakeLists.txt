@@ -61,6 +61,13 @@ add_executable(dreamcatcher ${SOURCES}
         src/Scenes/Scenes/MenuScene.h
         src/Scenes/Scenes/StoryScene.cpp
         src/Scenes/Scenes/StoryScene.h
+        src/Command/Command.h
+        src/Command/Commands/UpKeyCommand.cpp
+        src/Command/Commands/UpKeyCommand.h
+        src/Command/Commands/DownKeyCommand.cpp
+        src/Command/Commands/DownKeyCommand.h
+        src/Command/Commands/EnterCommand.cpp
+        src/Command/Commands/EnterCommand.h
 )
 
 file(GLOB TESTS ${PROJECT_SOURCE_DIR}/tests/*.cpp)

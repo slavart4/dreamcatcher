@@ -1,6 +1,6 @@
 #include "Director.h"
 
-void Director::constructMenuScene(Builder &builder, nlohmann::json& data) {
+void Director::constructScene(Builder &builder, nlohmann::json& data) {
     builder.setId(data);
     builder.setType(data);
     builder.setOptions(data);

@@ -7,8 +7,8 @@ class StoryBuilder : public Builder {
 public:
     void setId(nlohmann::json& scene) override;
     void setType(nlohmann::json& scene) override;
-    void setOptions(nlohmann::json& scene) override {};
-    void setOptionsButtons(nlohmann::json& scene) override {};
+    void setOptions(nlohmann::json& scene) override;
+    void setOptionsButtons(nlohmann::json& scene) override;
     void setTitle(nlohmann::json& scene) override;
     void setTexts(nlohmann::json& scene) override;
     void createScene() override;
@@ -21,7 +21,7 @@ private:
     std::shared_ptr<Options> m_options;
     std::string m_title;
     uint8_t m_id = 0;
-    uint8_t m_type = MENU_SCENE;
+    uint8_t m_type = STORY_SCENE;
 };
 
 

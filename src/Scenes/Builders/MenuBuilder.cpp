@@ -29,14 +29,14 @@ void MenuBuilder::setTitle(nlohmann::json &scene) {
     m_title = scene["title"];
 }
 
+void MenuBuilder::createScene() {
+    m_scene = std::make_shared<MenuScene>(m_id,m_type, m_options, m_title);
+}
+
 void MenuBuilder::setTexts(nlohmann::json &scene) {
     for(const auto& text : scene["texts"]) {
         m_scene->addText(text);
     }
-}
-
-void MenuBuilder::createScene() {
-    m_scene = std::make_shared<MenuScene>(m_id,m_type, m_options, m_title);
 }
 
 void MenuBuilder::setPictures(nlohmann::json& scene) {

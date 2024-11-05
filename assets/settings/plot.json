@@ -2,7 +2,7 @@
   "scenes": [
     {
       "id": 0,
-      "type": "menu",
+      "type": "story",
       "title": "Welcome to the game!",
       "texts": ["Billy is an ordinary schoolboy. With one exception. He constantly has bad dreams. In a desperate attempt to get rid of them, he buys a dreamcatcher at an Indian market with his last pocket money. He likes the animal figures hanging on it. A bear, a cat and a dog. Will they help get rid of the nightmares?"],
       "picturePaths": ["../assets/pictures/welcome.txt"],
