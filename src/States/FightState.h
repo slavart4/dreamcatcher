@@ -18,12 +18,15 @@ public:
 private:
     std::string makeTitle();
     void processAttack();
-    void onWin();
-    void onLose();
+    void processResult(AttackResult& result);
 
     StateContext& m_stateContext;
     ScenesManager& m_scenesManager;
     uint8_t m_sceneId;
+
+    bool m_finished = false;
+    bool m_win;
+    uint8_t m_enemy;
 };
 
 

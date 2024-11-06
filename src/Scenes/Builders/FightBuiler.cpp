@@ -22,6 +22,12 @@ void FightBuiler::setOptionsButtons(nlohmann::json& scene) {
             if(commandInfo["name"] == "specAbility") {
                 params.specAbility = commandInfo["value"];
             }
+            if(commandInfo["name"] == "onWinScene") {
+                params.onWinScene = commandInfo["value"];
+            }
+            if(commandInfo["name"] == "onLoseScene") {
+                params.onLoseScene = commandInfo["value"];
+            }
         }
         m_options->addButton(
                 Button(
@@ -29,7 +35,8 @@ void FightBuiler::setOptionsButtons(nlohmann::json& scene) {
                         btnInfo["textIndex"],
                         0,
                         btnInfo["name"],
-                        btnInfo["chosen"])
+                        btnInfo["chosen"],
+                        btnInfo["visible"])
         );
     }
 }

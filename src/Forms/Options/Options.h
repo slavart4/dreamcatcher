@@ -12,6 +12,7 @@ public:
     void setChosen(uint8_t index, bool isChosen);
     void increaseChosen();
     void decreaseChosen();
+    void reverseVisible();
 
     actionParams& action();
     std::string buttonsText();

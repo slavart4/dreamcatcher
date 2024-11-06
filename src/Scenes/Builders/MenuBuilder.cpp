@@ -30,7 +30,8 @@ void MenuBuilder::setOptionsButtons(nlohmann::json& scene) {
                 btnInfo["textIndex"],
                 btnInfo["pictureIndex"],
                 btnInfo["name"],
-                btnInfo["chosen"])
+                btnInfo["chosen"],
+                btnInfo["visible"])
                 );
     }
 }

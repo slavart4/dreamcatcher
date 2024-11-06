@@ -16,24 +16,46 @@ void Options::setChosen(uint8_t index, bool isChosen) {
 
 void Options::increaseChosen() {
     if(m_chosenButton < size() - 1) {
-        m_buttons[m_chosenButton].setChosen(false);
-        ++m_chosenButton;
-        m_buttons[m_chosenButton].setChosen(true);
+        if(m_buttons[m_chosenButton + 1].visible()) {
+            setChosen(m_chosenButton,false);
+            ++m_chosenButton;
+            setChosen(m_chosenButton,true);
+        }
     }
 }
 
 void Options::decreaseChosen() {
     if(m_chosenButton > 0) {
-        m_buttons[m_chosenButton].setChosen(false);
-        --m_chosenButton;
-        m_buttons[m_chosenButton].setChosen(true);
+        if(m_buttons[m_chosenButton - 1].visible()) {
+            setChosen(m_chosenButton,false);
+            --m_chosenButton;
+            setChosen(m_chosenButton,true);
+        }
+    }
+}
+
+
+void Options::reverseVisible() {
+    for(auto& button : m_buttons) {
+        bool visible = button.visible();
+        if(visible) {
+            button.setChosen(false);
+        }
+        button.setVisible(!visible);
+    }
+    for(size_t button = 0; button <= size(); button++) {
+        if(m_buttons[button].visible()) {
+            m_buttons[button].setChosen(true);
+            m_chosenButton = button;
+            return;
+        }
     }
 }
 
 std::string Options::buttonsText() {
     std::string result;
     for(auto& button : m_buttons) {
-        result += (button.chosen() ? "\033[32m" : "") + button.text() + "\033[0m" + "\n";
+        if(button.visible()) result += (button.chosen() ? "\033[32m" : "") + button.text() + "\033[0m" + "\n";
     }
     return result;
 }

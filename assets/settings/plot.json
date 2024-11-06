@@ -9,6 +9,7 @@
       "options": [
         {
           "name": "Press enter to continue",
+          "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
@@ -27,6 +28,7 @@
       "options": [
         {
           "name": "Start game",
+          "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
@@ -36,6 +38,7 @@
         },
         {
           "name": "Settings",
+          "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
@@ -58,6 +61,7 @@
       "options": [
         {
           "name": "Bear",
+          "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
@@ -68,6 +72,7 @@
         },
         {
           "name": "Cat",
+          "visible": true,
           "pictureIndex": 1,
           "textIndex": 1,
           "commands": [
@@ -78,6 +83,7 @@
         },
         {
           "name": "Dog",
+          "visible": true,
           "pictureIndex": 2,
           "textIndex": 2,
           "commands": [
@@ -97,6 +103,7 @@
       "options": [
         {
           "name": "Press enter to continue",
+          "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
@@ -110,11 +117,12 @@
       "id": 4,
       "type": "story",
       "title": "Billy sleeps and dreams",
-      "texts": ["Billie have a dream where he rides in the school bus."],
-      "picturePaths": ["../assets/pictures/bus.txt"],
+      "texts": ["Billie have a dream about sweet candies..."],
+      "picturePaths": ["../assets/pictures/candies.txt"],
       "options": [
         {
           "name": "Press enter to continue",
+          "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
@@ -133,6 +141,7 @@
       "options": [
         {
           "name": "Press enter to continue",
+          "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
@@ -151,6 +160,7 @@
       "options": [
         {
           "name": "Attack",
+          "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
@@ -160,12 +170,62 @@
         },
         {
           "name": "Special ability",
+          "visible": true,
           "pictureIndex": 0,
           "textIndex": 1,
           "commands": [
             { "name": "specAbility", "value": 3 }
           ],
           "chosen": false
+        },
+        {
+          "name": "Press enter to continue",
+          "visible": false,
+          "pictureIndex": 0,
+          "textIndex": 1,
+          "commands": [
+            { "name": "onWinScene", "value": 7 },
+            { "name": "onLoseScene", "value": 8 }
+          ],
+          "chosen": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "story",
+      "title": "Victory!",
+      "texts": ["Now Billy can fall asleep and have beautiful dreams"],
+      "picturePaths": ["../assets/pictures/goodend.txt"],
+      "options": [
+        {
+          "name": "The end!",
+          "visible": true,
+          "pictureIndex": 0,
+          "textIndex": 0,
+          "commands": [
+            { "name": "toScene", "value": 7 }
+          ],
+          "chosen": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "story",
+      "title": "Fiasco!",
+      "texts": ["Now Billy can't sleep and will miss school tomorrow..."],
+      "picturePaths": ["../assets/pictures/goodend.txt"],
+      "options": [
+        {
+          "name": "Try again!",
+          "visible": true,
+          "pictureIndex": 0,
+          "textIndex": 0,
+          "commands": [
+            { "name": "toScene", "value": 8 }
+          ],
+          "chosen": true
         }
       ]
     }

@@ -24,6 +24,7 @@ void StoryBuilder::setOptionsButtons(nlohmann::json& scene) {
                     0,
                     0,
                     scene["options"][0]["name"],
+                    true,
                     true)
     );
 }
