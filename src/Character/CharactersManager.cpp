@@ -22,3 +22,7 @@ CharactersManager::CharactersManager() {
         }
     }
 }
+
+AttackResult CharactersManager::attack(uint8_t defender) {
+    return m_fightManager.attack(m_mainCharacter, m_characters[defender]);
+}

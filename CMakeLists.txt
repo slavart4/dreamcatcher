@@ -84,6 +84,8 @@ add_executable(dreamcatcher ${SOURCES}
         src/Character/Factory/EnemyCreator.h
         src/Character/Factory/CharacterCreator.cpp
         src/Character/Factory/CharacterCreator.h
+        src/Character/FightManager.cpp
+        src/Character/FightManager.h
 )
 
 file(GLOB TESTS ${PROJECT_SOURCE_DIR}/tests/*.cpp)

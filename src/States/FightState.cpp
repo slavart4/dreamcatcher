@@ -16,8 +16,7 @@ void FightState::downKeyAction() {
 actionParams& FightState::enterKeyAction() {
     actionParams params = m_scenesManager.scene(m_sceneId)->options()->action();
     if(params.attack >= 0) {
-        CharactersManager::GetInstance()->mainCharacter()->attack(m_scenesManager.scene(m_sceneId)->enemy());
-        m_scenesManager.scene(m_sceneId)->setTitle(makeTitle());
+        processAttack();
     }
     if(params.specAbility >= 0) {
         CharactersManager::GetInstance()->mainCharacter()->specialAbility();
@@ -34,4 +33,26 @@ std::string FightState::makeTitle() {
             " vs "
             + enemy->name() + "(" + std::to_string(enemy->hp()) + " hp)";
     return title;
+}
+
+void FightState::processAttack() {
+    uint8_t enemy = m_scenesManager.scene(m_sceneId)->enemy();
+    AttackResult res = CharactersManager::GetInstance()->attack(enemy);
+    if(res.finished) {
+        if(res.winner == enemy) {
+            onLose();
+        } else {
+            onWin();
+        }
+    } else {
+        m_scenesManager.scene(m_sceneId)->setTitle(makeTitle());
+    }
+}
+
+void FightState::onWin() {
+    m_scenesManager.scene(m_sceneId)->setTitle("You won!");
+}
+
+void FightState::onLose() {
+    m_scenesManager.scene(m_sceneId)->setTitle("You lose!");
 }

@@ -16,6 +16,10 @@ public:
     Scene& scene() override { return *m_scenesManager.scene(m_sceneId); }
 private:
     std::string makeTitle();
+    void processAttack();
+    void onWin();
+    void onLose();
+
     StateContext& m_stateContext;
     ScenesManager& m_scenesManager;
     uint8_t m_sceneId;
