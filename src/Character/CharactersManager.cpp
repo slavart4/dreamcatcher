@@ -1,6 +1,13 @@
 #include "CharactersManager.h"
-#include "Factory/CharacterCreator.h"
-#include "Factory/EnemyCreator.h"
+
+CharactersManager* CharactersManager::chars_singleton_= nullptr;
+
+CharactersManager *CharactersManager::GetInstance() {
+    if(chars_singleton_==nullptr){
+        chars_singleton_ = new CharactersManager();
+    }
+    return chars_singleton_;
+}
 
 CharactersManager::CharactersManager() {
     DataIO dataIo("../assets/settings/characters.json");

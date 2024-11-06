@@ -2,6 +2,7 @@
 #define DREAMCATCHER_STATE_H
 
 #include "../Scenes/ScenesManager.h"
+#include "../Character/CharactersManager.h"
 
 class State {
 public:

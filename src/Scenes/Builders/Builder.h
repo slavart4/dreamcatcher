@@ -7,6 +7,7 @@
 #include "../../Forms/Options/Options.h"
 #include "../../Forms/Picture/Picture.h"
 #include "../../Forms/Button/Button.h"
+#include "../../Character/CharactersManager.h"
 
 class Builder {
 public:

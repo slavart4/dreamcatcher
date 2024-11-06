@@ -15,8 +15,13 @@ void MenuBuilder::setOptions(nlohmann::json& scene) {
 void MenuBuilder::setOptionsButtons(nlohmann::json& scene) {
     for(const auto& btnInfo : scene["options"]) {
         actionParams params;
-        if(btnInfo["command"]["name"] == "toScene") {
-            params.toScene = btnInfo["command"]["value"];
+        for(const auto& commandInfo : btnInfo["commands"]) {
+            if(commandInfo["name"] == "toScene") {
+                params.toScene = commandInfo["value"];
+            }
+            if(commandInfo["name"] == "setMainChar") {
+                params.setMainChar = commandInfo["value"];
+            }
         }
 
         m_options->addButton(

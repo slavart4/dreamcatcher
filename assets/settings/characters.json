@@ -1,7 +1,18 @@
 {
   "characters": {
-    "cat": {
+    "bear": {
       "id": 0,
+      "type": "main",
+      "name": "Bear",
+      "picture": "",
+      "stats": {
+        "hp": 40,
+        "attack": 20,
+        "agility": 5
+      }
+    },
+    "cat": {
+      "id": 1,
       "type": "main",
       "name": "Cat",
       "picture": "",
@@ -12,7 +23,7 @@
       }
     },
     "dog": {
-      "id": 1,
+      "id": 2,
       "type": "main",
       "name": "Dog",
       "picture": "",
@@ -22,21 +33,10 @@
         "agility": 10
       }
     },
-    "bear": {
-      "id": 2,
-      "type": "main",
-      "name": "Bear",
-      "picture": "",
-      "stats": {
-        "hp": 40,
-        "attack": 20,
-        "agility": 5
-      }
-    },
     "spider": {
       "id": 3,
       "type": "main",
-      "name": "Cat",
+      "name": "Spider",
       "picture": "",
       "stats": {
         "hp": 10,

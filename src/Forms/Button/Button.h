@@ -9,6 +9,7 @@
 
 struct actionParams {
     int8_t toScene = -1;
+    int8_t setMainChar = -1;
 };
 
 class Button {

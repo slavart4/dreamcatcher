@@ -11,7 +11,9 @@
           "name": "Press enter to continue",
           "pictureIndex": 0,
           "textIndex": 0,
-          "command": { "name": "toScene", "value": 1 },
+          "commands": [
+            { "name": "toScene", "value": 1 }
+          ],
           "chosen": true
         }
       ]
@@ -27,14 +29,18 @@
           "name": "Start game",
           "pictureIndex": 0,
           "textIndex": 0,
-          "command": { "name": "toScene", "value": 2 },
+          "commands": [
+            { "name": "toScene", "value": 2 }
+          ],
           "chosen": true
         },
         {
           "name": "Settings",
           "pictureIndex": 0,
           "textIndex": 0,
-          "command": { "name": "toScene", "value": 1 },
+          "commands": [
+            { "name": "toScene", "value": 1 }
+          ],
           "chosen": false
         }
       ]
@@ -54,21 +60,30 @@
           "name": "Bear",
           "pictureIndex": 0,
           "textIndex": 0,
-          "command": { "name": "toScene", "value": 3 },
+          "commands": [
+            { "name": "toScene", "value": 3 },
+            { "name": "setMainChar", "value": 0 }
+          ],
           "chosen": true
         },
         {
           "name": "Cat",
           "pictureIndex": 1,
           "textIndex": 1,
-          "command": { "name": "toScene", "value": 3 },
+          "commands": [
+            { "name": "toScene", "value": 3 },
+            { "name": "setMainChar", "value": 1 }
+          ],
           "chosen": false
         },
         {
           "name": "Dog",
           "pictureIndex": 2,
           "textIndex": 2,
-          "command": { "name": "toScene", "value": 3 },
+          "commands": [
+            { "name": "toScene", "value": 3 },
+            { "name": "setMainChar", "value": 2 }
+          ],
           "chosen": false
         }
       ]
@@ -84,7 +99,9 @@
           "name": "Press enter to continue",
           "pictureIndex": 0,
           "textIndex": 0,
-          "command": { "name": "toScene", "value": 4 },
+          "commands": [
+            { "name": "toScene", "value": 4 }
+          ],
           "chosen": true
         }
       ]
@@ -100,7 +117,9 @@
           "name": "Press enter to continue",
           "pictureIndex": 0,
           "textIndex": 0,
-          "command": { "name": "toScene", "value": 5 },
+          "commands": [
+            { "name": "toScene", "value": 5 }
+          ],
           "chosen": true
         }
       ]

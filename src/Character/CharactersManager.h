@@ -8,14 +8,26 @@
 
 class CharactersManager {
 public:
-    CharactersManager();
+    static CharactersManager *GetInstance();
+
     std::shared_ptr<Character> character(uint8_t id) { return m_characters.at(id); }
+    std::shared_ptr<Character> mainCharacter() { return m_mainCharacter; }
+    void setMainCharacter(uint8_t id) { m_mainCharacter = m_characters.at(id); }
 private:
-    void addCharacter(std::shared_ptr<Character> character) { m_characters[character->id()] = character; }
+    void addCharacter(const std::shared_ptr<Character>& character) { m_characters[character->id()] = character; }
     std::unordered_map<uint8_t, std::shared_ptr<Character>> m_characters;
+    std::shared_ptr<Character> m_mainCharacter;
 
     CharacterCreator m_characterCreator;
     EnemyCreator m_enemyCreator;
+
+// Singleton stuff
+public:
+    CharactersManager(CharactersManager &other) = delete;
+    void operator=(const CharactersManager&) = delete;
+private:
+    CharactersManager();
+    static CharactersManager* chars_singleton_;
 };
 
 
