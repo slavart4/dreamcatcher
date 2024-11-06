@@ -8,6 +8,8 @@
 #include "States/StateContext.h"
 #include "States/StoryState.h"
 
+#include "Character/CharactersManager.h"
+
 class Game {
 public:
     void run();

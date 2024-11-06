@@ -11,7 +11,9 @@ public:
     m_id(id), m_name(std::move(name)), m_picture(std::move(picture)), m_hp(hp), m_attack(attack), m_agility(agility) {}
 
     uint8_t id() override { return m_id; }
-    void attack(Character& character) override;
+    uint8_t hp() override { return m_hp; }
+    std::string name() override { return m_name; }
+    void attack(uint8_t id) override;
     void decreaseHP(uint8_t hp) override;
     bool avoid() override;
 

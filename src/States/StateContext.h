@@ -7,7 +7,6 @@
 
 class StateContext {
 public:
-//    StateContext(std::shared_ptr<State> state) : m_state(std::move(state)) {}
     void setState(std::shared_ptr<State> state) {
         m_state = std::move(state);
     }

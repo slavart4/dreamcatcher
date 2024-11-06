@@ -4,6 +4,7 @@
 #include <nlohmann/json.hpp>
 #include "../Scenes/MenuScene.h"
 #include "../Scenes/StoryScene.h"
+#include "../Scenes/FightScene.h"
 #include "../../Forms/Options/Options.h"
 #include "../../Forms/Picture/Picture.h"
 #include "../../Forms/Button/Button.h"

@@ -13,9 +13,11 @@ public:
     std::string& title() override { return m_title; }
     uint8_t id() override         { return m_id; }
     uint8_t type() override       { return m_type; }
+    uint8_t enemy() override {}
 
     void addPicture(std::shared_ptr<Picture> picture) override { m_pictures.push_back(picture); }
     void addText(const std::string& text) override { m_texts.push_back(text); }
+    void setTitle(const std::string& title) override { m_title = title; }
 private:
     uint8_t m_id = 0;
     uint8_t m_type = MENU_SCENE;

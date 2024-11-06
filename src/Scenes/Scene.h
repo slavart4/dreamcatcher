@@ -17,9 +17,11 @@ public:
     virtual std::string& title() = 0;
     virtual uint8_t id() = 0;
     virtual uint8_t type() = 0;
+    virtual uint8_t enemy() = 0;
 
     virtual void addPicture(std::shared_ptr<Picture> picture) = 0;
     virtual void addText(const std::string& text) = 0;
+    virtual void setTitle(const std::string& title) = 0;
 };
 
 #endif //DREAMCATCHER_SCENE_H

@@ -127,16 +127,45 @@
     {
       "id": 5,
       "type": "story",
-      "title": "Billy sleeps and dreams",
-      "texts": ["Billie have a dream where he rides in the school bus."],
-      "picturePaths": ["../assets/pictures/bus.txt"],
+      "title": "Oh no!",
+      "texts": ["A terrible spider climbed right into the window. Billy is very scared. Defeat the spider!"],
+      "picturePaths": ["../assets/pictures/spider.txt"],
       "options": [
         {
           "name": "Press enter to continue",
           "pictureIndex": 0,
           "textIndex": 0,
-          "command": { "name": "toScene", "value": 5 },
+          "commands": [
+            { "name": "toScene", "value": 6 }
+          ],
           "chosen": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "fight",
+      "enemy": 3,
+      "texts": ["Attack!", "Use your special ability!"],
+      "picturePaths": ["../assets/pictures/spider.txt"],
+      "options": [
+        {
+          "name": "Attack",
+          "pictureIndex": 0,
+          "textIndex": 0,
+          "commands": [
+            { "name": "attack", "value": 3 }
+          ],
+          "chosen": true
+        },
+        {
+          "name": "Special ability",
+          "pictureIndex": 0,
+          "textIndex": 1,
+          "commands": [
+            { "name": "specAbility", "value": 3 }
+          ],
+          "chosen": false
         }
       ]
     }

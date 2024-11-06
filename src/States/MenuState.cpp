@@ -11,10 +11,10 @@ void MenuState::downKeyAction() {
 
 actionParams& MenuState::enterKeyAction() {
     actionParams params = m_scenesManager.scene(m_sceneId)->options()->action();
-    if(params.setMainChar > 0) {
+    if(params.setMainChar >= 0) {
         CharactersManager::GetInstance()->setMainCharacter(params.setMainChar);
     }
-    if(params.toScene > 0) {
+    if(params.toScene >= 0) {
         if(m_scenesManager.scene(params.toScene)->type() == STORY_SCENE) {
             m_stateContext.setState(std::make_shared<StoryState>(m_stateContext, m_scenesManager, params.toScene));
         }

@@ -1,7 +1,8 @@
 #include "EnemyCharacter.h"
+#include "../CharactersManager.h"
 
-void EnemyCharacter::attack(Character &character) {
-    character.decreaseHP(m_attack);
+void EnemyCharacter::attack(uint8_t id) {
+    CharactersManager::GetInstance()->character(id)->decreaseHP(m_attack);
 }
 
 void EnemyCharacter::decreaseHP(uint8_t hp) {

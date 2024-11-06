@@ -10,13 +10,11 @@ public:
                uint8_t sceneType,
                std::shared_ptr<Options> options,
                std::string& title,
-               Character& character,
-               Character& enemy) :
+               uint8_t enemy) :
     m_id(id),
     m_type(sceneType),
     m_options(std::move(options)),
     m_title(title),
-    m_character(character),
     m_enemy(enemy) {};
 
     std::shared_ptr<Options> options() override { return m_options; }
@@ -28,19 +26,16 @@ public:
 
     void addPicture(std::shared_ptr<Picture> picture) override { m_pictures.push_back(picture); }
     void addText(const std::string& text) override { m_texts.push_back(text); }
-
-    Character& character() { return m_character; }
-    Character& enemy() { return m_enemy; }
+    void setTitle(const std::string& title) override { m_title = title; }
+    uint8_t enemy() { return m_enemy; }
 private:
     uint8_t m_id = 0;
     uint8_t m_type = FIGHT_SCENE;
+    uint8_t m_enemy = 0;
     std::vector<std::shared_ptr<Picture>> m_pictures;
     std::vector<std::string> m_texts;
     std::shared_ptr<Options> m_options;
     std::string m_title;
-
-    Character& m_character;
-    Character& m_enemy;
 };
 
 

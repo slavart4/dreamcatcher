@@ -6,7 +6,7 @@
 
 class MenuState : public State {
 public:
-    MenuState(StateContext& stateContext,ScenesManager& scenesManager, uint8_t sceneId) :
+    MenuState(StateContext& stateContext, ScenesManager& scenesManager, uint8_t sceneId) :
     m_stateContext(stateContext), m_scenesManager(scenesManager), m_sceneId(sceneId) {}
 
     void upKeyAction() override;

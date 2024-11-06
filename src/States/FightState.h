@@ -6,12 +6,17 @@
 
 class FightState : public State {
 public:
-    FightState(ScenesManager& scenesManager, uint8_t sceneId) : m_scenesManager(scenesManager), m_sceneId(sceneId) {}
-    void upKeyAction() override {}
-    void downKeyAction() override {}
-    actionParams& enterKeyAction() override {}
+    FightState(StateContext& stateContext, ScenesManager& scenesManager, uint8_t sceneId);
+
+    void upKeyAction() override;
+    void downKeyAction() override;
+    actionParams& enterKeyAction() override;
+
     void setScene(uint8_t sceneID) override { m_sceneId = sceneID; }
+    Scene& scene() override { return *m_scenesManager.scene(m_sceneId); }
 private:
+    std::string makeTitle();
+    StateContext& m_stateContext;
     ScenesManager& m_scenesManager;
     uint8_t m_sceneId;
 };

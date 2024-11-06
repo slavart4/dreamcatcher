@@ -15,11 +15,19 @@ void FightBuiler::setOptions(nlohmann::json& scene) {
 void FightBuiler::setOptionsButtons(nlohmann::json& scene) {
     for(const auto& btnInfo : scene["options"]) {
         actionParams params;
+        for(const auto& commandInfo : btnInfo["commands"]) {
+            if(commandInfo["name"] == "attack") {
+                params.attack = commandInfo["value"];
+            }
+            if(commandInfo["name"] == "specAbility") {
+                params.specAbility = commandInfo["value"];
+            }
+        }
         m_options->addButton(
                 Button(
                         params,
+                        btnInfo["textIndex"],
                         0,
-                        1,
                         btnInfo["name"],
                         btnInfo["chosen"])
         );
@@ -27,15 +35,15 @@ void FightBuiler::setOptionsButtons(nlohmann::json& scene) {
 }
 
 void FightBuiler::setTitle(nlohmann::json &scene) {
-    m_title = scene["title"];
+    m_title = "";
 }
 
-void FightBuiler::setCharacters(nlohmann::json &data) {
-
+void FightBuiler::setCharacters(nlohmann::json &scene) {
+    m_enemy = scene["enemy"];
 }
 
 void FightBuiler::createScene() {
-    m_scene = std::make_shared<MenuScene>(m_id,m_type, m_options, m_title);
+    m_scene = std::make_shared<FightScene>(m_id, m_type, m_options, m_title, m_enemy);
 }
 
 void FightBuiler::setTexts(nlohmann::json &scene) {
