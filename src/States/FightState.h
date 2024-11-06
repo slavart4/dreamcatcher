@@ -11,6 +11,7 @@ public:
     void upKeyAction() override;
     void downKeyAction() override;
     actionParams& enterKeyAction() override;
+    void processEnterAction(actionParams& params) override;
 
     void setScene(uint8_t sceneID) override { m_sceneId = sceneID; }
     Scene& scene() override { return *m_scenesManager.scene(m_sceneId); }

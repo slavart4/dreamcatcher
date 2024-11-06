@@ -15,6 +15,11 @@ void FightState::downKeyAction() {
 
 actionParams& FightState::enterKeyAction() {
     actionParams params = m_scenesManager.scene(m_sceneId)->options()->action();
+    processEnterAction(params);
+    return m_scenesManager.scene(m_sceneId)->options()->action();
+}
+
+void FightState::processEnterAction(actionParams &params) {
     if(params.attack >= 0) {
         processAttack();
     }
@@ -22,7 +27,6 @@ actionParams& FightState::enterKeyAction() {
         CharactersManager::GetInstance()->mainCharacter()->specialAbility();
         m_scenesManager.scene(m_sceneId)->setTitle(makeTitle());
     }
-    return m_scenesManager.scene(m_sceneId)->options()->action();
 }
 
 std::string FightState::makeTitle() {

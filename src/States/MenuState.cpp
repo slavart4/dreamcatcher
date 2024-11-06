@@ -11,6 +11,11 @@ void MenuState::downKeyAction() {
 
 actionParams& MenuState::enterKeyAction() {
     actionParams params = m_scenesManager.scene(m_sceneId)->options()->action();
+    processEnterAction(params);
+    return m_scenesManager.scene(m_sceneId)->options()->action();
+}
+
+void MenuState::processEnterAction(actionParams &params) {
     if(params.setMainChar >= 0) {
         CharactersManager::GetInstance()->setMainCharacter(params.setMainChar);
     }
@@ -19,5 +24,4 @@ actionParams& MenuState::enterKeyAction() {
             m_stateContext.setState(std::make_shared<StoryState>(m_stateContext, m_scenesManager, params.toScene));
         }
     }
-    return m_scenesManager.scene(m_sceneId)->options()->action();
 }
