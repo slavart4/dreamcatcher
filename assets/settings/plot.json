@@ -50,47 +50,20 @@
     },
     {
       "id": 2,
-      "type": "menu",
-      "title": "Choose your character!",
-      "texts": [
-        "Not agile, but very strong. When he walks the earth trembles...",
-        "Small and nimble, loves to sit in boxes. Destroys enemies with its claws!",
-        "Very hardy and playful. Can smell prey a mile away!"
-      ],
-      "picturePaths": ["../assets/pictures/bear.txt", "../assets/pictures/cat.txt", "../assets/pictures/dog.txt"],
+      "type": "story",
+      "title": "Billy sleeps and dreams",
+      "texts": ["After a hard day at school, Billy slept like a log."],
+      "picturePaths": ["../assets/pictures/sleep.txt"],
       "options": [
         {
-          "name": "Bear",
+          "name": "Press enter to continue",
           "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
-            { "name": "toScene", "value": 3 },
-            { "name": "setMainChar", "value": 0 }
+            { "name": "toScene", "value": 3 }
           ],
           "chosen": true
-        },
-        {
-          "name": "Cat",
-          "visible": true,
-          "pictureIndex": 1,
-          "textIndex": 1,
-          "commands": [
-            { "name": "toScene", "value": 3 },
-            { "name": "setMainChar", "value": 1 }
-          ],
-          "chosen": false
-        },
-        {
-          "name": "Dog",
-          "visible": true,
-          "pictureIndex": 2,
-          "textIndex": 2,
-          "commands": [
-            { "name": "toScene", "value": 3 },
-            { "name": "setMainChar", "value": 2 }
-          ],
-          "chosen": false
         }
       ]
     },
@@ -98,8 +71,8 @@
       "id": 3,
       "type": "story",
       "title": "Billy sleeps and dreams",
-      "texts": ["After a hard day at school, Billy slept like a log."],
-      "picturePaths": ["../assets/pictures/sleep.txt"],
+      "texts": ["Billie have a dream about sweet candies..."],
+      "picturePaths": ["../assets/pictures/candies.txt"],
       "options": [
         {
           "name": "Press enter to continue",
@@ -116,9 +89,9 @@
     {
       "id": 4,
       "type": "story",
-      "title": "Billy sleeps and dreams",
-      "texts": ["Billie have a dream about sweet candies..."],
-      "picturePaths": ["../assets/pictures/candies.txt"],
+      "title": "Oh no!",
+      "texts": ["Suddenly a terrible spider burst into Billy's dreams. Billy is very scared. Defeat the spider!"],
+      "picturePaths": ["../assets/pictures/spider.txt"],
       "options": [
         {
           "name": "Press enter to continue",
@@ -134,20 +107,47 @@
     },
     {
       "id": 5,
-      "type": "story",
-      "title": "Oh no!",
-      "texts": ["A terrible spider climbed right into the window. Billy is very scared. Defeat the spider!"],
-      "picturePaths": ["../assets/pictures/spider.txt"],
+      "type": "menu",
+      "title": "Choose your character to defeat all nightmares!",
+      "texts": [
+        "Not agile, but very strong. When he walks the earth trembles...",
+        "Small and nimble, loves to sit in boxes. Destroys enemies with its claws!",
+        "Very hardy and playful. Can smell prey a mile away!"
+      ],
+      "picturePaths": ["../assets/pictures/bear.txt", "../assets/pictures/cat.txt", "../assets/pictures/dog.txt"],
       "options": [
         {
-          "name": "Press enter to continue",
+          "name": "Bear",
           "visible": true,
           "pictureIndex": 0,
           "textIndex": 0,
           "commands": [
-            { "name": "toScene", "value": 6 }
+            { "name": "toScene", "value": 6 },
+            { "name": "setMainChar", "value": 0 }
           ],
           "chosen": true
+        },
+        {
+          "name": "Cat",
+          "visible": true,
+          "pictureIndex": 1,
+          "textIndex": 1,
+          "commands": [
+            { "name": "toScene", "value": 6 },
+            { "name": "setMainChar", "value": 1 }
+          ],
+          "chosen": false
+        },
+        {
+          "name": "Dog",
+          "visible": true,
+          "pictureIndex": 2,
+          "textIndex": 2,
+          "commands": [
+            { "name": "toScene", "value": 6 },
+            { "name": "setMainChar", "value": 2 }
+          ],
+          "chosen": false
         }
       ]
     },
